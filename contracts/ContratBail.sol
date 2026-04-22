@@ -10,6 +10,7 @@ contract ContratBail {
 
     // ---------- Part 3 : le loyer ----------
     uint public loyer;
+    bool public loyerPaye;
 
     // ---------- Constructor (Parts 2 & 3) ----------
     // Le proprietaire = celui qui deploie le contrat
