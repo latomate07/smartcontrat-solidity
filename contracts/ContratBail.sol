@@ -13,6 +13,9 @@ contract ContratBail {
     uint public loyer;
     bool public loyerPaye;
 
+    // ---------- Part 6 : declaration de l'event ----------
+    event LoyerPaye(address locataire, uint montant);
+
     // ---------- Constructor (Parts 2 & 3) ----------
     // Le proprietaire = celui qui deploie le contrat
     // Le loyer est defini au moment du deploiement
@@ -26,10 +29,12 @@ contract ContratBail {
         locataire = _locataire;
     }
 
-    // ---------- Part 5 : le paiement du loyer ----------
+    // ---------- Part 5 & 6 : payer le loyer + emettre l'event ----------
     function payerLoyer() public payable {
         require(msg.sender == locataire, "Seul le locataire peut payer le loyer");
-        require(msg.value == loyer, "Montant incorrect");
+        require(msg.value == loyer, "Le montant envoye ne correspond pas au loyer");
+
         loyerPaye = true;
+        emit LoyerPaye(msg.sender, msg.value);
     }
 }
