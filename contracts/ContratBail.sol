@@ -10,5 +10,8 @@ contract ContratBail {
         locataire = _locataire;
     }
 
+    function definirLocataire(address locataire) public{
 
+    }
 }
+

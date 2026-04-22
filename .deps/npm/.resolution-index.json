@@ -10,7 +10,7 @@
   "contracts/ContratBail.sol": {
     "__sources__": {
       "contracts/ContratBail.sol": {
-        "content": "pragma solidity ^0.8.0;\r\ncontract ContratBail {\r\n    string public nomContrat = \"Contrat de Bail avec Blockchain\";\r\n    address public proprietaire;\r\n    address public locataire;\r\n    uint public loyer;\r\n\r\n    constructor (address _locataire) {\r\n        proprietaire = msg.sender;\r\n        locataire = _locataire;\r\n    }\r\n\r\n\r\n}",
+        "content": "pragma solidity ^0.8.0;\r\ncontract ContratBail {\r\n    string public nomContrat = \"Contrat de Bail avec Blockchain\";\r\n    address public proprietaire;\r\n    address public locataire;\r\n    uint public loyer;\r\n\r\n    constructor (address _locataire) {\r\n        proprietaire = msg.sender;\r\n        locataire = _locataire;\r\n    }\r\n\r\n    function definirLocataire(address locataire) public{\r\n\r\n    }\r\n}\r\n\r\n",
         "file": "contracts/ContratBail.sol"
       }
     }
