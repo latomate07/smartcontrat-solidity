@@ -37,4 +37,13 @@ contract ContratBail {
         loyerPaye = true;
         emit LoyerPaye(msg.sender, msg.value);
     }
+
+    // ---------- Part 7 : recuperer le loyer ----------
+    function retirerLoyer() public {
+        require(msg.sender == proprietaire, "Seul le proprietaire peut retirer le loyer");
+        require(loyerPaye, "Le loyer n'a pas encore ete paye");
+        uint montant = address(this).balance;
+        loyerPaye = false;
+        payable(proprietaire).transfer(montant);
+    }
 }
