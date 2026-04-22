@@ -11,7 +11,7 @@ contract ContratBail {
     }
 
     function definirLocataire(address locataire) public{
-
+        
     }
 }
 
