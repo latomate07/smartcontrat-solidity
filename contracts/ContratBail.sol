@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 contract ContratBail {
@@ -7,7 +8,7 @@ contract ContratBail {
     // ---------- Part 2 : les acteurs ----------
     address public proprietaire;
     address public locataire;
-
+    
     // ---------- Part 3 : le loyer ----------
     uint public loyer;
     bool public loyerPaye;
